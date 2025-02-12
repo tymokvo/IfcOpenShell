@@ -394,15 +394,15 @@ if(BUILD_IFCGEOM)
         file(STRINGS ${OCC_INCLUDE_DIR}/Standard_Version.hxx OCC_MAJOR
             REGEX "#define OCC_VERSION_MAJOR.*"
         )
-        string(REGEX MATCH "[0-9]+" OCC_MAJOR ${OCC_MAJOR})
+        string(REGEX MATCH "[0-9]+" OCC_MAJOR "${OCC_MAJOR}")
         file(STRINGS ${OCC_INCLUDE_DIR}/Standard_Version.hxx OCC_MINOR
           REGEX "#define OCC_VERSION_MINOR.*"
         )
-        string(REGEX MATCH "[0-9]+" OCC_MINOR ${OCC_MINOR})
+        string(REGEX MATCH "[0-9]+" OCC_MINOR "${OCC_MINOR}")
         file(STRINGS ${OCC_INCLUDE_DIR}/Standard_Version.hxx OCC_MAINT
           REGEX "#define OCC_VERSION_MAINTENANCE.*"
         )
-        string(REGEX MATCH "[0-9]+" OCC_MAINT ${OCC_MAINT})
+        string(REGEX MATCH "[0-9]+" OCC_MAINT "${OCC_MAINT}")
         set(OCC_VERSION_STRING "${OCC_MAJOR}.${OCC_MINOR}.${OCC_MAINT}")
     endif(OCC_INCLUDE_DIR)
 
